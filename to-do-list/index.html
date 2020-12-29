@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To do List</title>
+        <link rel="stylesheet" href="./styles.css">
+        
+    </head>
+
+    <body onload="carregar()">
+        <div id="criarTask">
+            <div id="title">
+                <h1>To do List</h1>
+            </div>           
+            
+
+            <form id="formulario">
+                <input type="text" id="item">
+                <button onclick="armazenar()" id="save">Salvar</button>
+                <button id="excluir" onclick="excluirItem()">Excluir</button>
+            </form>
+
+            <div id="instruções">
+
+
+                <h2>Instruções</h4>
+
+                <p id="instrucoes_p">Digite uma tarefa no campo acima e clique em Salvar para criá-la <br><br>Para excluir, selecione as tarefas e clique em Excluir para excluí-las
+                </p>
+    
+            </div>
+        </div>
+
+        <div id="tarefas">
+            <ul id="lista">
+
+            </ul>
+        </div>
+
+        
+        
+        <script src="./scripts.js"></script>
+    </body>
+</html>

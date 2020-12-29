@@ -1,0 +1,163 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#criarTask{
+    margin-left: 50px;
+    margin-top: 30px;
+    max-width: 550px;
+    background-color: #54f772;
+    padding-bottom: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+}
+
+
+#title{
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    padding-top: 2px; 
+}
+
+
+#formulario{
+    text-align: center;
+}
+
+
+#item{
+    display: inline-block;
+    width: 50%;
+    height: 40px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5px;
+}
+
+#save{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+    margin-right: 5px;
+    padding: 12px;
+    color: white;
+    font-weight: 600;
+    background-color: #54f772;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 5px;
+    border-style: solid;
+    font-size: 24px;
+    box-sizing: border-box;
+    height: 50px;
+}
+
+#save:hover{
+    background-color: white;
+    color: #54f772;
+    border-color: #54f772;
+}
+
+#excluir{
+    padding:10px;
+    color: white;
+    background-color: #ff4f30;
+    font-size: 24px;
+    font-weight: 600;
+    border-color: white;
+    border-radius: 5px;
+    border-style: solid;
+    box-sizing: border-box;
+    height: 50px;
+    border-width: 1px;
+}
+
+#excluir:hover{
+    color: #ff4f30;
+    background-color: white;
+    border-color: #ff4f30;
+}
+
+h2{
+    color: white;
+    font-size: 28px;
+    text-align:center;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#instrucoes_p{
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+#tarefas{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 30px;
+    font-size: 24px;   
+}
+
+@media screen and (max-width: 800px){
+    #criarTask{
+        margin-left:0;
+        display: block;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    #tarefas{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #save{
+        padding: 10px;
+        font-size: 16px;
+        height: auto;
+    }
+
+    #excluir{
+        padding: 10px;
+        font-size: 16px;
+        height: auto;
+    }
+
+    #tarefas{
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 450px){
+    #item{
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+        width: 90%
+    }
+    
+    #save{
+        font-size: 24px;
+        margin-right: 5px;
+    }
+
+    #excluir{
+        font-size: 24px;
+        margin-left: 5px;
+    }
+}
+
+
