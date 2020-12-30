@@ -1,0 +1,24 @@
+#container{
+    
+    display: inline-block;
+}
+
+.controls{
+    background-color:lightskyblue;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+#pause{
+    display: none;
+}
+
+.btn{
+    width: 50px;
+    margin-right: 7px;
+}
+
+.btn:hover{
+    background-color: white;
+    border-radius: 50%;
+}

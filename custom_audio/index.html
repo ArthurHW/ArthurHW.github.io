@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Avançado - Audio</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        
+
+        <div id="container">
+            <audio id="som">
+                <source src="./Assets/file_example_MP3_1MG.mp3" type="audio/mp3">
+            </audio>
+            <div class="controls">
+                <img class="btn" onclick="backward()" src="./Assets/15_sec_backward.png">
+                <img class="btn" onclick="slowDown()" src="./Assets/fast_backward.png">
+                <img id="play" class="btn" onclick="play()" src="./Assets/play.png">
+                <img id="pause" class="btn" onclick="pause()" src="./Assets/pause.png">
+                <img class="btn" onclick="stop()" src="./Assets/stop.png">
+                <img class="btn" onclick="speedUp()" src="./Assets/fast_forward.png">
+                <img class="btn" onclick="forward()" src="./Assets/15_sec_forward.png">
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+
+    </body>
+</html>
