@@ -9,18 +9,24 @@
     </head>
 
     <body onload="carregar()">
+          
         <div id="criarTask">
+            <div class="containerName">
+                <h1 id="name">nome do usuario</h1>
+            </div>
+             
             <div id="title">
                 <h1>To do List</h1>
-            </div>           
+            </div>   
+                
             
 
             <form id="formulario">
-                <input type="text" id="item">
+                <input type="text" id="item" placeholder="Tarefa">
                 <button onclick="armazenar()" id="save">Salvar</button>
                 <button id="excluir" onclick="excluirItem()">Excluir</button>
             </form>
-
+            
             <div id="instruções">
 
 
@@ -28,8 +34,13 @@
 
                 <p id="instrucoes_p">Digite uma tarefa no campo acima e clique em Salvar para criá-la <br><br>Para excluir, selecione as tarefas e clique em Excluir
                 </p>
-    
+
             </div>
+            <div class="containerName">
+                <input type="text" id="nameInsert" placeholder="Usuário">
+            </div>
+            
+
         </div>
 
         <div id="tarefas">
