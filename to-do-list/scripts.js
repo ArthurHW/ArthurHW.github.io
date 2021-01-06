@@ -6,6 +6,12 @@ var tarefa = document.getElementById("campo").value;
 
  function carregar(){
 
+    let name = localStorage.getItem("name")
+    let display = document.getElementById("name")
+
+    display.innerText = name;
+
+
     let listaPai = document.getElementById("lista");
 
     listaPai.innerHTML = "";
@@ -70,3 +76,17 @@ function excluirItem(){
     carregar();
 }
 
+function mudarNome(){
+
+    let element = document.getElementById("nameInsert")
+    let name = element.value
+
+    let display = document.getElementById("name")
+
+    localStorage.setItem("name", name);
+
+    display.innerText = name
+
+
+
+}

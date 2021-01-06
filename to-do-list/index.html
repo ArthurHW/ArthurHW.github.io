@@ -12,7 +12,7 @@
           
         <div id="criarTask">
             <div class="containerName">
-                <h1 id="name">nome do usuario</h1>
+                <h1 id="name"></h1>
             </div>
              
             <div id="title">
@@ -32,12 +32,13 @@
 
                 <h2>Instruções</h4>
 
-                <p id="instrucoes_p">Digite uma tarefa no campo acima e clique em Salvar para criá-la <br><br>Para excluir, selecione as tarefas e clique em Excluir
+                <p id="instrucoes_p">Digite uma tarefa no campo acima e clique em Salvar para criá-la <br><br>Para excluir, selecione as tarefas e clique em Excluir <br><br>
+                    Para Alterar o nome de usuário, basta digitá-lo abaixo
                 </p>
 
             </div>
             <div class="containerName">
-                <input type="text" id="nameInsert" placeholder="Usuário">
+                <input type="text" id="nameInsert" placeholder="Usuário" onchange="mudarNome()">
             </div>
             
 
