@@ -1,8 +1,9 @@
 // iniciar minhas variáveis
 let board = ['', '', '', '', '', '', '', '', ''];
 let playerTime = 0;
-let symbols = ['o', 'x'];
 let gameOver = false;
+let symbols = ['o', 'x'];
+
 
 let winStates = [
     [0, 1, 2],
@@ -56,3 +57,4 @@ function isWin() {
 
     return false;
 }
+

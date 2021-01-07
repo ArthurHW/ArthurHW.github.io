@@ -1,14 +1,15 @@
 body{
     text-align: center;
-
+    
+    
 }
 h1{
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .square{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     background-color: beige;
     border: 1px solid gray;
     display: inline-block;
@@ -20,9 +21,9 @@ h1{
 
 .o:after{
     position: absolute;
-    content: "\1F6E1";
-    font-size: 100px;
-    line-height: 150px;
+    content: "🛡️";
+    font-size: 50px;
+    line-height: 100px;
     top:0;
     bottom:0;
     left:0;
@@ -34,11 +35,28 @@ h1{
 
 .x:after{
     position: absolute;
-    content: "\2694";
-    font-size: 100px;
-    line-height: 150px;
+    content: "⚔️";
+    font-size: 50px;
+    line-height: 100px;
     top:0;
     bottom:0;
     left:0;
     right:0;
+}
+
+.playAgain{
+    padding: 10px;
+    margin-top: 20px;
+    background-color: beige;
+    border-style: solid;
+}
+
+.playAgain:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.playAgain:hover{
+    background-color: white;
+    padding: 9px;
 }

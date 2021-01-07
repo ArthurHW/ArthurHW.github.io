@@ -40,7 +40,16 @@ function updateSquares() {
 
         if (symbol != '') {
             square.innerHTML = `<div class='${symbol}'></div>`
+        } else if(square.firstChild != undefined){
+            square.removeChild(square.firstChild)
         }
     })
 
+}
+
+function playAgain(){
+    board = ['', '', '', '', '', '', '', '', ''];
+    playerTime = 0;
+    gameOver = false;
+    updateSquares();
 }
