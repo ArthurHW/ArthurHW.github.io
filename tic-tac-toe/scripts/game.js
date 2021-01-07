@@ -2,7 +2,7 @@
 let board = ['', '', '', '', '', '', '', '', ''];
 let playerTime = 0;
 let gameOver = false;
-let symbols = ['o', 'x'];
+let symbols = ['x', 'o'];
 
 
 let winStates = [
@@ -18,23 +18,23 @@ let winStates = [
 
 function handleMove(position) {
 
-    if (gameOver) {
-        return;
-    }
-
-    if (board[position] == '') {
-        board[position] = symbols[playerTime];
+    if (!gameOver) {
 
 
-        gameOver = isWin();
+        if (board[position] == '') {
+            board[position] = symbols[playerTime];
 
-        if (gameOver == false) {
 
-            playerTime = (playerTime == 0) ? 1 : 0;
+            gameOver = isWin();
+
+            if (gameOver == false) {
+
+                playerTime = (playerTime == 0) ? 1 : 0;
+            }
         }
-    }
 
-    return gameOver;
+        return gameOver;
+    }
 }
 
 function isWin() {
