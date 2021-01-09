@@ -89,6 +89,7 @@ body{
     border: none;
     border-radius: 10px;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 #gameBoard{
@@ -107,6 +108,7 @@ body{
 
     .card_back, .card_front{
         border-radius: 10px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.45);
     }
 
     .card_back{ 
