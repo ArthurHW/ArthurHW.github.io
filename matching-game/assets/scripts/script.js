@@ -11,10 +11,10 @@ function startGame(){
     initializeCards(game.createCardsFromTechs())
 }
 
-function initializeCards(cards){
+function initializeCards(){
      let gameBoard = document.getElementById("gameBoard")
 
-     gameBoard.innerHtml = ''
+     gameBoard.innerHTML = ''
      
     game.cards.forEach((card) => {
 

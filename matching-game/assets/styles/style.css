@@ -4,13 +4,30 @@
     box-sizing: border-box;
 }
 
+
+
 body{
     font-family: 'Righteous', sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     /* height: 100vh; */
-    background-color: #c7cdd3;
+    background-color: white;
+}
+
+#title{
+    height: 100px;
+    background-color: #05c3ff;
+    align-self: stretch;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#title h1{
+    position: relative;
+    top: calc(50% - 20px);   
 }
 
 .card{
@@ -19,6 +36,7 @@ body{
     height: 150px;
     transform-style: preserve-3d;
     transition: transform .5s;
+    
 }
 
 .card_back, .card_front{
@@ -44,9 +62,9 @@ body{
 }
 
 .card_back{
-    color: #101c2c;
+    color: white;
     background-color: #05c3ff;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 #gameOver{
@@ -79,4 +97,24 @@ body{
     grid-template: auto auto auto auto auto / auto auto auto auto;
     gap: 20px;
 
+}
+
+@media screen and (max-width: 700px){
+    .card{
+        width: 15vmin;
+        height: 15vmin;
+    }
+
+    .card_back, .card_front{
+        border-radius: 10px;
+    }
+
+    .card_back{ 
+        font-size: 1.5em;
+    }
+
+    .card_front img {
+        width: 10vmin;
+        height: 10vmin;
+    }
 }
