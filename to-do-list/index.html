@@ -12,7 +12,7 @@
           
         <div id="criarTask">
             <div class="containerName">
-                <h1 id="name"></h1>
+                <h1 id="name">User Name</h1>    
             </div>
              
             <div id="title">
@@ -22,23 +22,23 @@
             
 
             <form id="formulario">
-                <input type="text" id="item" placeholder="Tarefa">
-                <button onclick="armazenar()" id="save">Salvar</button>
-                <button id="excluir" onclick="excluirItem()">Excluir</button>
+                <input type="text" id="item" placeholder="Task">
+                <button onclick="armazenar()" id="save">Save</button>
+                <button id="excluir" onclick="excluirItem()">Delete</button>
             </form>
             
             <div id="instruções">
 
 
-                <h2>Instruções</h4>
+                <h2>Istructions</h4>
 
-                <p id="instrucoes_p">Digite uma tarefa no campo acima e clique em Salvar para criá-la <br><br>Para excluir, selecione as tarefas e clique em Excluir <br><br>
-                    Para Alterar o nome de usuário, basta digitá-lo abaixo
+                <p id="instrucoes_p">Enter a task in the field above and click Save to create it <br><br>To delete, select the tasks and click Delete <br><br>  
+                To change the username, just type it below
                 </p>
 
             </div>
             <div class="containerName">
-                <input type="text" id="nameInsert" placeholder="Usuário" onchange="mudarNome()">
+                <input type="text" id="nameInsert" placeholder="User Name" onchange="mudarNome()">
             </div>
             
 

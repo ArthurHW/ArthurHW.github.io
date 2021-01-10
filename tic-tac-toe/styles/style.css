@@ -1,16 +1,22 @@
+*{
+    --square-size: 150px;
+    --emoji-size: 75px;
+}
+
 body{
     text-align: center;
-    
-    
+    background-color: #333;
+    color: white;  
 }
+
 h1{
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .square{
-    width: 100px;
-    height: 100px;
-    background-color: beige;
+    width: var(--square-size);
+    height: var(--square-size);
+    background-color: white;
     border: 1px solid gray;
     display: inline-block;
 }
@@ -22,8 +28,8 @@ h1{
 .o:after{
     position: absolute;
     content: "🛡️";
-    font-size: 50px;
-    line-height: 100px;
+    font-size: var(--emoji-size);
+    line-height: var(--square-size);
     top:0;
     bottom:0;
     left:0;
@@ -35,9 +41,9 @@ h1{
 
 .x:after{
     position: absolute;
-    content: "⚔️";
-    font-size: 50px;
-    line-height: 100px;
+    content: "🛡️";
+    font-size: var(--emoji-size);
+    line-height: var(--square-size);
     top:0;
     bottom:0;
     left:0;
@@ -47,8 +53,10 @@ h1{
 .playAgain{
     padding: 10px;
     margin-top: 20px;
-    background-color: beige;
-    border-style: solid;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    color: #333;
 }
 
 .playAgain:focus{
@@ -58,5 +66,9 @@ h1{
 
 .playAgain:hover{
     background-color: white;
-    padding: 9px;
+    font-size: 1.1em;
+    transform: scale(1.1);
+    transition: .5s;
+    /* background-color: #333;
+    color: white; */
 }
