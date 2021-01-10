@@ -1,6 +1,7 @@
 *{
     --square-size: 150px;
     --emoji-size: 75px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -9,8 +10,45 @@ body{
     color: white;  
 }
 
-h1{
-    font-family: Arial, Helvetica, sans-serif;
+#displayPlayer1{
+    display: inline-block;
+}
+
+#displayPlayer2{
+    display: inline-block;
+}
+
+#scorePlayer1, #scorePlayer2{
+    color: white;
+    font-size: 24px;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+input{
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    display: block;
+}
+
+input:focus{
+    box-shadow: 0 0 0 0;
+}
+
+#userInformations{
+    margin-left: 50px
+}
+
+h3{
+    font-size: 24px;
 }
 
 .square{
@@ -41,7 +79,7 @@ h1{
 
 .x:after{
     position: absolute;
-    content: "🛡️";
+    content: "⚔️";
     font-size: var(--emoji-size);
     line-height: var(--square-size);
     top:0;
@@ -66,9 +104,9 @@ h1{
 
 .playAgain:hover{
     background-color: white;
-    font-size: 1.1em;
-    transform: scale(1.1);
-    transition: .5s;
-    /* background-color: #333;
-    color: white; */
+    font-size: 1.05em;
+    transform: scale(1.05);
+    transition: 500ms;
+    cursor: pointer;
 }
+

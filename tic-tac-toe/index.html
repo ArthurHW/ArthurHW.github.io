@@ -12,25 +12,44 @@
 <body>
     <h1>Tic-Tac-Toe</h1>
 
-    <div class="stage">
-        <div>
-            <div id="0" class="square"></div>
-            <div id="1" class="square"></div>
-            <div id="2" class="square"></div>
-        </div>
-        <div>
-            <div id="3" class="square"></div>
-            <div id="4" class="square"></div>
-            <div id="5" class="square"></div>
-        </div>
-        <div>
-            <div id="6" class="square"></div>
-            <div id="7" class="square"></div>
-            <div id="8" class="square"></div>
-        </div>
-    </div>
 
-    <button  class="playAgain" onclick="playAgain()">Play Again</button>
+    <div class="container">
+
+        
+
+        <div class="stage">
+            <div>
+                <div id="0" class="square"></div>
+                <div id="1" class="square"></div>
+                <div id="2" class="square"></div>
+            </div>
+            <div>
+                <div id="3" class="square"></div>
+                <div id="4" class="square"></div>
+                <div id="5" class="square"></div>
+            </div>
+            <div>
+                <div id="6" class="square"></div>
+                <div id="7" class="square"></div>
+                <div id="8" class="square"></div>
+            </div>
+
+            <button  class="playAgain" onclick="playAgain()">Play Again</button>
+        </div>
+    
+        
+
+        <div id="userInformations">
+            <h3 id="displayPlayer1">Player 1 ⚔️</h3>
+            <span id="scorePlayer1">0</span>
+            <input id="player1" type="text" placeholder="Player 1" onchange="changeNamePlayer1()">
+            <h3 id="displayPlayer2">Player 2 🛡️</h3>
+            <span id="scorePlayer2">0</span>
+            <input id="player2" type="text" placeholder="Player 2" onchange="changeNamePlayer2()">
+        </div>
+
+    </div>
+    
 
     <script src="./scripts/game.js"></script>
     <script src="./scripts/interface.js"></script>

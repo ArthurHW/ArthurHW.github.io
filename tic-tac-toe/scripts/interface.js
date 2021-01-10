@@ -1,3 +1,10 @@
+let player1 = "Player 1"
+let player2 = "Player 2"
+
+let scorePlayer1 = 0
+let scorePlayer2 = 0
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
     let squares = document.querySelectorAll(".square");
@@ -8,6 +15,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
+function updateScores(){
+    let scoreDisplay1 = document.getElementById("scorePlayer1")
+    let scoreDisplay2 = document.getElementById("scorePlayer2")
+
+    scoreDisplay1.innerHTML = scorePlayer1
+    scoreDisplay2.innerHTML = scorePlayer2
+}
+
+function changeNamePlayer1(){
+    player1 = document.getElementById("player1").value + " ⚔️"
+    let display = document.getElementById("displayPlayer1")
+    display.innerHTML = player1 
+}
+
+function changeNamePlayer2(){
+    player2 = document.getElementById("player2").value + " 🛡️"
+    let display = document.getElementById("displayPlayer2")
+    display.innerHTML = player2 
+}
+
 function handleClick(event) {
 
 
@@ -17,7 +44,16 @@ function handleClick(event) {
     if (handleMove(postion)) {
 
         setTimeout(() => {
-            alert(" O Jogo Acabou - O Vencedor foi " + symbols[playerTime].toUpperCase());
+            let winner
+            if (playerTime == 0){
+                winner = player1
+                scorePlayer1++
+            } else{
+                winner = player2
+                scorePlayer2++
+            }
+            updateScores()
+            alert(" O Jogo Acabou - O Vencedor foi " + winner);
         }, 10);
 
     };
