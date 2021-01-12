@@ -3,13 +3,19 @@
     padding: 0;
     box-sizing: border-box;
     --azul-claro: #05c3ff;
-    --azul-escuro: #101c2c;
+    --azul-escuro: #000;
+    --azul: #0462bf;
+    transition: .5s;
+}
+
+body.dark{
+    background-color: var(--azul-escuro);  
 }
 
 
 
 body{
-    font-family: 'Righteous', sans-serif;
+    font-family: 'Courier', 'Righteous', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,8 +34,18 @@ body{
     margin-bottom: 20px;
 }
 
+#header.dark{
+    background-color: var(--azul);
+}
+
+#theme-switcher.dark{
+    background-color: var(--azul-claro);
+    color: var(--azul-escuro)
+}
+
 #theme-switcher{
     margin-left: 25px;
+    font-size: 20px;
     position: absolute;
     right: 15%;
     padding: 10px;
@@ -50,6 +66,10 @@ body{
 
 #title{ 
     text-align: center;
+    color: var(--azul-escuro);
+}
+
+#title.dark{
     color: white;
 }
 
@@ -87,9 +107,14 @@ body{
 }
 
 .card_back{
-    color: white;
+    color: var(--azul-escuro);
     background-color: #05c3ff;
     font-size: 40px;
+}
+
+.card_back.dark{
+    background-color: var(--azul);
+    color: white;
 }
 
 #gameOver{
@@ -104,6 +129,7 @@ body{
     align-items: center;
     flex-direction: column;
     top: 0;
+    padding: 50px;
 
 }
 
@@ -124,6 +150,22 @@ body{
     gap: 20px;
 
 }
+
+@media screen and (max-width: 850px){
+    #header{
+        flex-direction: column;
+    }
+    
+    #theme-switcher{
+        position: relative;
+        right: 0;
+        top: 5px;
+        font-size: 18px;
+
+    }
+}
+
+
 
 @media screen and (max-width: 700px){
     .card{

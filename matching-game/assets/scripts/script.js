@@ -4,7 +4,20 @@ const CARD = "card"
 const ICON = "icon"
 
 function switchTheme(){
-    
+    let body = document.getElementsByTagName('body')[0]
+    let title = document.getElementById("title")
+    let cardBack = document.getElementsByClassName("card_back")
+    let header = document.getElementById("header")
+    let themeSwitcher = document.getElementById("theme-switcher")
+
+    themeSwitcher.classList.toggle("dark")
+    header.classList.toggle("dark")
+    for(card of cardBack){
+        card.classList.toggle("dark")
+    }
+    title.classList.toggle("dark")
+    body.classList.toggle("dark")
+    console.log(body)
 }
 
 
