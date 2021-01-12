@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --azul-claro: #05c3ff;
+    --azul-escuro: #101c2c;
 }
 
 
@@ -16,19 +18,32 @@ body{
     background-color: white;
 }
 
-#title{
+#header{
     height: 100px;
-    background-color: #05c3ff;
+    background-color: var(--azul-claro);
     align-self: stretch;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
+}
+
+#theme-switcher{
+    margin-left: 25px;
+    position: absolute;
+    right: 15%;
+    padding: 10px;
+    border: none;
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
+
+#title{ 
+    text-align: center;
     color: white;
 }
 
-#title h1{
-    position: relative;
-    top: calc(50% - 20px);   
-}
+
 
 .card{
     position: relative;
