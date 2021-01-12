@@ -36,6 +36,16 @@ body{
     border: none;
     outline: 0;
     box-shadow: 0 0 0 0;
+    background-color: var(--azul-escuro);
+    color: white;
+    border-radius: 5px;
+}
+
+#theme-switcher:hover{
+    transform: scale(1.1);
+    transition: .5s;
+    cursor: pointer;
+
 }
 
 #title{ 

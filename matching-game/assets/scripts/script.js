@@ -3,6 +3,10 @@ const BACK = "card_back"
 const CARD = "card"
 const ICON = "icon"
 
+function switchTheme(){
+    
+}
+
 
 startGame()
 
