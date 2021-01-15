@@ -83,7 +83,7 @@ body.dark {
     transition: opacity , fill,  var(--transition-delay);
     width: 100px;
     height: 100px;
-    fill: var(--accent-color)
+    fill: var(--accent-color);
 }
 
 .sun{

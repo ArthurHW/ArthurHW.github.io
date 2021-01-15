@@ -18,6 +18,7 @@ function switchTheme(){
     title.classList.toggle("dark")
     body.classList.toggle("dark")
     console.log(body)
+
 }
 
 
