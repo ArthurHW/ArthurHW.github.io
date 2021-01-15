@@ -27,7 +27,7 @@ body{
 
 #header{
     height: 100px;
-    background-color: var(--azul-claro);
+    background-color: #DDD;
     align-self: stretch;
     display: flex;
     justify-content: center;
@@ -42,6 +42,7 @@ body{
 #theme-switcher.dark{
     background-color: #333;
     color: white;
+    
 }
 
 #theme-switcher{
@@ -53,8 +54,8 @@ body{
     border: none;
     outline: 0;
     box-shadow: 0 0 0 0;
-    background-color: var(--azul-escuro);
-    color: white;
+    background-color: white;
+    color: black;
     border-radius: 5px;
 }
 
@@ -111,11 +112,11 @@ body{
 
 .card_back{
     color: var(--azul-escuro);
-    background-color: #05c3ff;
+    background-color: #DDD;
     font-size: 40px;
 }
 
-.card_back.dark{
+.card.dark .card_back{
     background-color: #111;
     color: white;
 }
