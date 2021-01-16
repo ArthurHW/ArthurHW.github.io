@@ -53,11 +53,20 @@ function handleClick(event) {
                 scorePlayer2++
             }
             updateScores()
-            alert(" O Jogo Acabou - O Vencedor foi " + winner);
+            gameOverFunction(winner)
         }, 10);
 
     };
     updateSquare(postion);
+}
+
+function gameOverFunction(winner){
+    let gameOverLayer = document.getElementById('gameOver')
+    let winnerMessageDisplay = document.getElementById('winnerMessage')
+
+    gameOverLayer.style.display = 'flex'
+    winnerMessageDisplay.innerHTML = `O Jogo Acabou => O Vencedor foi ${winner}`
+
 }
 
 function updateSquare(postion) {
@@ -84,6 +93,9 @@ function updateSquares() {
 }
 
 function playAgain(){
+    let gameOverLayer = document.getElementById('gameOver')
+    gameOverLayer.style.display = 'none'
+
     board = ['', '', '', '', '', '', '', '', ''];
     playerTime = 0;
     gameOver = false;

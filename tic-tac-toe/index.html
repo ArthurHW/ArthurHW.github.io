@@ -12,6 +12,8 @@
 <body>
     <h1>Tic-Tac-Toe</h1>
 
+    
+
 
     <div class="container">
 
@@ -34,7 +36,7 @@
                 <div id="8" class="square"></div>
             </div>
 
-            <button  class="playAgain" onclick="playAgain()">Play Again</button>
+            <button  class="playAgain" onclick="playAgain()">Restart</button>
         </div>
     
         
@@ -48,6 +50,11 @@
             <input id="player2" type="text" placeholder="Player 2" onchange="changeNamePlayer2()">
         </div>
 
+    </div>
+
+    <div id="gameOver">
+        <h2 id="winnerMessage"></h2>
+        <button onclick="playAgain()" class="playAgain endGame">Play Again</button>
     </div>
     
 
