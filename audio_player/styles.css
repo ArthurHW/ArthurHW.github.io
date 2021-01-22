@@ -4,6 +4,7 @@ body{
     align-items: center;
     height: 100vh;
     margin: 0; 
+    background-color: #333;
 }
 
 #container{
@@ -13,8 +14,9 @@ body{
 }
 
 .controls{
-    background-color:#299df0;
+    background-color:white;
     border-radius: 60px;
+    border: 2px solid black;
     padding: 20px;
 }
 

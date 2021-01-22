@@ -1,8 +1,12 @@
+body{
+    margin: 20px;
+}
+
 #paginas{
-    background-color:#299df0;
+    background-color:#333;
     display: inline-block;
     padding: 20px;
-    border-radius: 25px;
+    border-radius: 20px;
 }
 
 a{
