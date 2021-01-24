@@ -50,6 +50,7 @@ class Calculator {
                 computation = prev * current
                 break
             case '÷':
+            case '/':
                 computation = prev / current
                 break
             default:
@@ -99,7 +100,8 @@ const deleteButton = document.querySelector('[data-delete]')
 const allClearButton = document.querySelector('[data-all-clear]')
 const previousOperandTextElement = document.querySelector('[data-previous-operand]')
 const currentOperandTextElement = document.querySelector('[data-current-operand]')
-
+const validNumberValues = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.' ]
+const validOperationValues = ['/', '*', '-', '+']
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
@@ -130,4 +132,26 @@ allClearButton.addEventListener('click', button => {
 deleteButton.addEventListener('click', button => {
     calculator.delete()
     calculator.updateDisplay()
+})
+
+
+
+window.addEventListener('keydown', key => {
+    if (validNumberValues.includes(key.key)){
+        calculator.appendNumber(key.key)
+        calculator.updateDisplay()
+    } else if (validOperationValues.includes(key.key)){
+        calculator.chooseOperation(key.key)
+        calculator.updateDisplay()
+    } else if (key.key == 'Enter'){
+        calculator.compute()
+        calculator.updateDisplay()
+    } else if (key.key == 'Delete' || key.key == 'Backspace'){
+        calculator.delete()
+        calculator.updateDisplay()
+    } else if (key.key == ' '){
+        calculator.clear()
+        calculator.updateDisplay()
+    }
+    
 })
