@@ -9,6 +9,9 @@ export function update(){
   if (onSnake(food)) {
     expandSnake(EXPANSION_RATE)
     food = getRandomFoodPosition()
+    return true
+  } else{
+    return false
   }
 }
 

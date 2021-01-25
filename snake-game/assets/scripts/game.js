@@ -4,10 +4,16 @@ import { outsideGrid } from "./grid.js"
 
 let gameOverLayer = document.getElementById('gameOverScreen')
 let restartButton = document.getElementById('restartButton')
+let score = 0
+let topScore = localStorage.getItem('topScoreSnakeGame')
+let scoreDisplay = document.getElementById('scoreDisplay')
+let topScoreDisplay = document.getElementById('topScoreDisplay')
 
 let lastRenderTime = 0
 let gameOver = false
 const gameBoard = document.getElementById("game-board")
+
+topScoreDisplay.innerHTML = 'TOPSCORE: ' + topScore
 
 function main(currentTime){
 
@@ -31,7 +37,9 @@ window.requestAnimationFrame(main)
 
 function update(){
     updateSnake()
-    updateFood()
+    if (updateFood()) {
+        updateScore()
+    }
     checkDeath()
 }
 
@@ -48,6 +56,20 @@ function checkDeath(){
 restartButton.addEventListener('click', () => {
     window.location = './'
 })
+
+function updateTopScore(){
+    topScore = score
+    localStorage.setItem('topScoreSnakeGame', topScore)
+    topScoreDisplay.innerHTML = 'TOPSCORE: ' + topScore
+}
+
+function updateScore(){
+    score++
+    if (score > topScore){
+        updateTopScore()
+    }
+    scoreDisplay.innerHTML = 'SCORE: ' + score.toString()
+}
 
 
 

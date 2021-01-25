@@ -59,7 +59,14 @@ body {
 }
 
 #toolbar {
-    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#toolbar > h1 {
+    margin:0 25px;
+    font-size: 20px;
 }
 
 #easy{
