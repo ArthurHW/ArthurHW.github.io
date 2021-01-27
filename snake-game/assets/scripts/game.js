@@ -13,7 +13,12 @@ let lastRenderTime = 0
 let gameOver = false
 const gameBoard = document.getElementById("game-board")
 
-topScoreDisplay.innerHTML = 'TOPSCORE: ' + topScore
+if (topScore == null){
+    topScoreDisplay.innerHTML = 'HIGHEST SCORE: 0'
+} else{
+    topScoreDisplay.innerHTML = 'HIGHEST SCORE: ' + topScore
+}
+
 
 function main(currentTime){
 
@@ -60,7 +65,7 @@ restartButton.addEventListener('click', () => {
 function updateTopScore(){
     topScore = score
     localStorage.setItem('topScoreSnakeGame', topScore)
-    topScoreDisplay.innerHTML = 'TOPSCORE: ' + topScore
+    topScoreDisplay.innerHTML = 'HIGHEST SCORE: ' + topScore
 }
 
 function updateScore(){
