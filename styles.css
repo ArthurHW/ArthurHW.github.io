@@ -2,6 +2,11 @@ body{
     margin: 20px;
 }
 
+h1, h2{
+    color: white;
+    text-align: center;
+}
+
 #paginas{
     background-color:#333;
     display: inline-block;
