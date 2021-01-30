@@ -3,21 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <script src="./script.js" defer></script>
         <title>Binary Converter</title>
     </head>
     <body>
-        <h1>Binary Converter</h1>
-        <input id="input" type="number" placeholder="Number to be converted">
-        <input type="radio" class="selectConversionType" id="positiveInteger" name="positiveInteger" value="positiveInteger">
-        <label for="positiveInteger">Positive Integer</label> 
-        <input type="radio" class="selectConversionType" id="signMagnitude" name="signMagnitude" value="signMagnitude">
-        <label for="signMagnitude">Sign Magnitude</label>
-        <input type="radio" class="selectConversionType" id="twosComplement" name="twosComplement" value="twosComplement">
-        <label for="twosComplement">Two's Complement</label>
-        <input type="radio" class="selectConversionType" id="onesComplement" name="onesComplement" value="onesComplement">
-        <label for="onesComplement">One's Complement</label>
-        <h2 id="displayResult">001010</h2>
+        <h1 id="title">Binary Converter</h1>
+        <input id="input" type="number" placeholder="Decimal Number" onchange="decimalToBinary()">
+        <h2 id="displayResult">Example = 0 000</h2>
+        <button>Convert</button>
 
+        <h2>Informations</h2>
+
+        <p> 
+             This converter utilizes the sign magnitude representation. In this representation the first bit of the number (the rightmost bit) represents
+             the signal (1 represents a negative number and 0 a positive one). The other bits represent the magnitude of the number itself. <br> <br> Please don't type
+             any number with decimal places, this converter doesn't support this type of input <br><br> <strong>Thank you for support!!!</strong> 
+        </p>
         
         
     </body>
