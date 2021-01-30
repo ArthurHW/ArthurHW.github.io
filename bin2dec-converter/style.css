@@ -2,7 +2,7 @@
     --background: #333;
     color: white;
     box-sizing: border-box;
-    font-family:'Courier New', Courier, monospace
+    font-family: monospace, 'Courier New', Courier;
 }
 
 #title {
@@ -44,18 +44,4 @@ h2{
     font-size: 40px;
 }
 
-button {
-    font-size: 24px;
-    padding: 10px;
-    color: var(--background);
-    background-color: yellow;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
-}
 
-button:hover {
-    transition: .5s;
-    transform: scale(1.1);
-}
