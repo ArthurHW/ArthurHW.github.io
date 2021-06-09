@@ -76,7 +76,17 @@ function updateScore(){
     scoreDisplay.innerHTML = 'SCORE: ' + score.toString()
 }
 
-
+window.addEventListener('keydown',e => {
+    if (gameOver){
+        switch(e.key) {
+            case 'Enter':
+            case 'Escape':
+            case ' ':
+                window.location = './'
+                break
+        }
+    }
+})
 
 
 
