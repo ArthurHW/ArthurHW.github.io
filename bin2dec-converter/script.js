@@ -1,10 +1,10 @@
-
-
-let inputBlock = document.getElementById('input')
-let display = document.getElementById('displayResult')
+const inputBinary = document.getElementById('input-binary')
+const inputDecimal = document.getElementById('input-decimal')
+const displayBinary = document.getElementById('displayResultBinary')
+const displayDecimal = document.getElementById('displayResultDecimal')
 
 function decimalToBinary(){
-    let decimalNumber = inputBlock.value
+    let decimalNumber = inputDecimal.value
     let auxiliar
     let iterations = 0
     let resultado = ''
@@ -30,7 +30,6 @@ function decimalToBinary(){
         } while (auxiliar >= 1)
         
     }
-    console.log(iterations)
 
     for (let i = 0; i < iterations; i++){
         rest = decimalNumber % 2
@@ -42,7 +41,6 @@ function decimalToBinary(){
         }
         decimalNumber /= 2
         resultado = resultado + bit
-        
     }
 
     if (negative){
@@ -52,5 +50,16 @@ function decimalToBinary(){
     }
 
     resultado = resultado.split('').reverse().join('')
-    display.innerHTML =  resultado
+    displayBinary.innerHTML =  'Binary = ' + resultado
+}
+
+function binaryToDecimal() {
+    let binaryNumber = inputBinary.value
+    let base = 1
+    let result = 0
+    binaryNumber = binaryNumber.split('').reverse().forEach(char => {
+        result += base * Number(char)
+        base *= 2
+    })
+    displayDecimal.innerHTML = 'Decimal = ' + result
 }

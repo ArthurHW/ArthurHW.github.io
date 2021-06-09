@@ -4,20 +4,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="../return/return.css">
         <script src="./script.js" defer></script>
         <title>Binary Converter</title>
     </head>
     <body>
+        <a href="../" id="return"></a>
+
         <h1 id="title">Binary Converter</h1>
-        <input id="input" type="number" placeholder="Decimal Number" oninput="decimalToBinary()">
-        <h2 id="displayResult">Example = 0 000</h2>
+        <input title="Decimal Number" id="input-decimal" type="number" placeholder="Decimal Number" oninput="decimalToBinary()">
+        <input title="Binary Number" id="input-binary" type="number" placeholder="Binary Number" oninput="binaryToDecimal()">
+        <h2 class="display" id="displayResultDecimal">Decimal = 0</h2>
+        <h2 class="display" id="displayResultBinary">Binary = 0 000</h2>
 
-        <h2>Informations</h2>
-
-        <p>  To convert a number, just start typing and the result will appear below your input!<br> <br>
-             This converter utilizes the sign magnitude representation. In this representation the first bit (the rightmost bit) represents
-             the signal (1 represents a negative number and 0 a positive one). The other bits represent the magnitude of the number itself. <br> <br> Please don't type
-             any number with decimal places, this converter doesn't support this type of input. <br><br> <strong>Thank you for support!!!</strong> 
         </p>
         
         
