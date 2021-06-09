@@ -3,28 +3,53 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HTML Avançado - Audio</title>
+        <title>Audio - Player</title>
         <link rel="stylesheet" href="./styles.css">
+        <script src="./script.js" defer></script>
     </head>
     <body>
+
+        <a href="../" id="return">
+            <!-- <img src="./Assets/left-arrow.svg" alt="return" title="return"> -->
+        </a>
         
 
         <div id="container">
-            <audio id="som">
-                <source src="./Assets/file_example_MP3_1MG.mp3" type="audio/mp3">
+
+            <audio onloadedmetadata="updateProgressBar()" id="music">
+                <source src="./Assets/sound.mp3" type="audio/mp3">
             </audio>
+
+            <div id="music-name-container"> 
+                <a href="https://www.youtube.com/watch?v=bXHfrdi_fsU" target="_blank">Ascence - About You</a> 
+             </div>
+
+            <img id="background" src="./Assets/ncs-background.jpg" alt="Background">
+
+            <div class="playback-rate-display">
+                Audio Speed: 1.0
+            </div>
+
+            <div class="progress">
+                <span class="start"></span>
+                <div class="progress-bar">
+                  <div class="now"></div>
+                </div>
+                <span class="end"></span>
+            </div>
+
             <div class="controls">
-                <img class="btn" onclick="backward()" src="./Assets/15_sec_backward.png">
-                <img class="btn" onclick="slowDown()" src="./Assets/fast_backward.png">
-                <img id="play" class="btn" onclick="play()" src="./Assets/play.png">
-                <img id="pause" class="btn" onclick="pause()" src="./Assets/pause.png">
-                <img class="btn" onclick="stop()" src="./Assets/stop.png">
-                <img class="btn" onclick="speedUp()" src="./Assets/fast_forward.png">
-                <img class="btn" onclick="forward()" src="./Assets/15_sec_forward.png">
+                <img title="return 15 seconds" alt="return 15 seconds" class="btn" onclick="backward()" src="./Assets/15_sec_backward.png">
+                <img title="slow down" alt="slow down" class="btn" onclick="slowDown()" src="./Assets/fast_backward.png">
+                <img title="play" alt="play" id="play" class="btn" onclick="play()" src="./Assets/play.png">
+                <img title="pause" alt="pause" id="pause" class="btn" onclick="pause()" src="./Assets/pause.png">
+                <img title="stop" alt="stop" class="btn" onclick="stop()" src="./Assets/stop.png">
+                <img title="speed up" alt="speed up" class="btn" onclick="speedUp()" src="./Assets/fast_forward.png">
+                <img title="skip 15 seconds" alt="skip 15 seconds" class="btn" onclick="forward()" src="./Assets/15_sec_forward.png">
             </div>
         </div>
 
-        <script src="./script.js"></script>
+        <footer><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></footer>
 
     </body>
 </html>
