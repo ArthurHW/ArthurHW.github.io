@@ -1,17 +1,11 @@
 body {
     --accent-color: orangered;
-    --background-color: white;
+    --background-color: #f0f0f0;
     --text-color: black;
     --button-text-color: var(--background-color);
-    --transition-delay: 1s; 
+    --transition-delay: 1.5s; 
 
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
+    
 
     transition: var(--transition-delay);
     background-color: var(--background-color);
@@ -22,7 +16,16 @@ body.dark {
     --accent-color: #D0D066;
     --background-color: #333;
     --text-color: white;
+}
 
+main {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
 
 .title {
@@ -106,6 +109,10 @@ body.dark {
 }
 
 @media screen and (max-width: 400px){
+
+    body{
+        --transition-delay: 1s;
+    }
 
     h2{
         font-size: 40px;

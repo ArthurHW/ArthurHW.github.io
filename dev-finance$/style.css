@@ -116,10 +116,6 @@ button:hover {
 
 /* Header ======================= */
 
-#return-container{
-    position: fixed;
-}
-
 header {
     background: #2D4A22;
     padding: 2rem 0 10rem;
