@@ -1,6 +1,7 @@
 * {
     --background: #333;
     color: white;
+    margin: 0;
     box-sizing: border-box;
     font-family: monospace, 'Courier New', Courier;
 }
@@ -15,7 +16,7 @@ p {
     max-width: 1200px;
 }
 
-body {
+main {
     margin: 0;
     height: 100vh;  
     background-color: var(--background);

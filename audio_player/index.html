@@ -10,11 +10,14 @@
     </head>
     <body>
 
-        <a href="../" id="return">
-        </a>
+        <div id="return-container">
+            <a href="../" id="return">
+            </a>
+        </div>
+        
         
 
-        <div id="container">
+        <main id="container">
 
             <audio onloadedmetadata="updateProgressBar()" id="music">
                 <source src="./Assets/sound.mp3" type="audio/mp3">
@@ -47,7 +50,7 @@
                 <img title="speed up" alt="speed up" class="btn" onclick="speedUp()" src="./Assets/fast_forward.png">
                 <img title="skip 15 seconds" alt="skip 15 seconds" class="btn" onclick="forward()" src="./Assets/15_sec_forward.png">
             </div>
-        </div>
+        </main>
 
         <footer><div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></footer>
 
